@@ -1,0 +1,13 @@
+body {
+  max-width: 600 px;
+}
+
+h1 {
+  color: black;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.row.row-cols-2 {
+  max-width: 600px;
+  margin-left: 50px;
+}
