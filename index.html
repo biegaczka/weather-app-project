@@ -10,6 +10,11 @@
     ></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap"
       rel="stylesheet"
     />
@@ -23,64 +28,72 @@
   </head>
   <body>
     <div class="container">
-      <h1>Weather Today !</h1>
-      <h2>30-11-2020, Monday, 10:47</h2>
-      <h3>
-        <button type="button" class="btn btn-primary">Primary</button> Search
-        engine
-      </h3>
+      <h1>
+        Weather Today
+        <img
+          src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/230/cloud-with-tornado_1f32a.png"
+          width="50"
+        />
+      </h1>
+      <div class="todays-date">
+        <footer>30 November 2020</footer>
+        <footer>Monday</footer>
+        <footer>14:57</footer>
+      </div>
+      <div class="look-for-city">
+        <button type="button" class="btn btn-warning">
+          <img
+            src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/left-pointing-magnifying-glass_1f50d.png"
+            width="30"
+          />
+        </button>
+        Enter name of the city
+      </div>
       <div class="city-name">
         <div class="row">
-          <div class="col-sm-2">
-            Gdynia
-            <br />
-            <span>⛅ 5°C | °F </span>
-          </div>
-          <div class="col-sm-2">
-            <span> Precipitation: 76% </span>
-            <br />
-            <span> Humidity: 77% </span>
-            <br />
-            <span> Wind: 7 m/s </span>
-          </div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
+          <div class="w-100"></div>
+          <div class="col">Column</div>
+          <div class="col">Column</div>
         </div>
       </div>
       <h4>Upcoming days:</h4>
       <div class="upcoming-days">
         <div class="row">
-          <div class="col-sm-1">Mon</div>
+          <div class="col-sm-2">Mon</div>
           <div class="col-sm-1">☀</div>
-          <div class="col-sm-1">6°C |°F</div>
+          <div class="col-sm-3">6°C |°F</div>
         </div>
         <div class="row">
-          <div class="col-sm-1">Tue</div>
+          <div class="col-sm-2">Tue</div>
           <div class="col-sm-1">🌤</div>
-          <div class="col-sm-1">5°C |°F</div>
+          <div class="col-sm-3">5°C |°F</div>
         </div>
         <div class="row">
-          <div class="col-sm-1">Wed</div>
+          <div class="col-sm-2">Wed</div>
           <div class="col-sm-1">☁</div>
-          <div class="col-sm-1">4°C |°F</div>
+          <div class="col-sm-3">4°C |°F</div>
         </div>
         <div class="row">
-          <div class="col-sm-1">Thu</div>
+          <div class="col-sm-2">Thu</div>
           <div class="col-sm-1">🌨</div>
-          <div class="col-sm-1">5°C |°F</div>
+          <div class="col-sm-3">5°C |°F</div>
         </div>
         <div class="row">
-          <div class="col-sm-1">Fri</div>
+          <div class="col-sm-2">Fri</div>
           <div class="col-sm-1">🌦</div>
-          <div class="col-sm-1">3°C |°F</div>
+          <div class="col-sm-3">3°C |°F</div>
         </div>
       </div>
       <h5>Have a good day !</h5>
-      <p>
-        Designed by Iga |
-        <a href="https://github.com/biegaczka/weather-app-project">
-          Open-source code
-        </a>
-      </p>
     </div>
+    <p class="author">
+      Designed by Iga |
+      <a href="https://github.com/biegaczka/weather-app-project">
+        Open-source code
+      </a>
+    </p>
     <script src="src/app.js"></script>
   </body>
 </html>
