@@ -1,12 +1,21 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+}
 h1 {
+  font-family: "Architects Daughter", cursive;
   color: rgb(33, 45, 94, 0.8);
-  font-family: "Nerko One", cursive;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Architects Daughter", cursive;
+  color: rgb(33, 45, 94, 0.8);
   margin-bottom: 0px;
   text-align: center;
 }
 
 .container {
-  font-family: "Ubuntu", sans-serif;
   max-width: 30%;
   border: 1px solid #9d9a9b;
   border-radius: 10px;
@@ -27,8 +36,8 @@ h1 {
   opacity: 0.8;
 }
 
-.city-search-result {
-  font-family: "Nerko One", cursive;
+.city-name {
+  font-family: "Architects Daughter", cursive;
   font-size: 50px;
   color: #444e76;
   position: relative;
@@ -37,26 +46,36 @@ h1 {
 }
 
 .temperature-type {
+  font-family: "Architects Daughter", cursive;
   color: rgb(234, 171, 25);
-  //rgb(68, 78, 118);
-  font-family: "Nerko One", cursive;
-  font-size: 50px;
+  font-size: 30px;
+  font-weight: bold;
   position: relative;
-  top: 5px;
-  left: 15px;
+  left: 20px;
 }
 
-.emoji {
-  display: block;
+.weather-image {
   position: relative;
-  top: 0px;
   left: 55px;
-  padding: 0px;
 }
-.conditions {
+.weather-conditions {
+  text-align: center;
+  opacity: 0.7;
+}
+
+.conditions-opinion {
+  font-family: "Architects Daughter", cursive;
   display: block;
   position: relative;
-  left: 100px;
+  left: 242px;
+}
+
+.upcoming-days {
+  font-family: "Architects Daughter", cursive;
+  display: block;
+  position: relative;
+  left: 114px;
+  top: 0px;
 }
 
 p {
