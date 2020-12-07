@@ -36,49 +36,57 @@
         />
       </h1>
       <div class="todays-date">
-        <footer>30 November 2020</footer>
-        <footer>Monday</footer>
-        <footer>14:57</footer>
+        <footer id="date"></footer>
+        <section id="yearUp"></section>
+        <br />
       </div>
-      <form>
+      <form class="search-engine" id="search-form">
         <div class="look-for-city">
           <button type="button" class="btn btn-warning">
             <img
-              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/lg/57/left-pointing-magnifying-glass_1f50d.png"
-              width="30"
+              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/230/left-pointing-magnifying-glass_1f50d.png"
+              width="20"
+            />
+          </button>
+          <button type="button" class="btn btn-light">
+            <img
+              src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/265/round-pushpin_1f4cd.png"
+              width="20"
             />
           </button>
           <input
-            type="text"
+            type="search"
+            class="search-control"
+            id="city-input"
             placeholder="Enter name of the city"
             autofocus="on"
             autcomplete="off"
           />
         </div>
-      </form>
-      <div class="city">
-        <div class="row">
-          <div class="col">
-            <div class="city-name">Gdynia</div>
-            <div class="weather-conditions">
-              Precipitation: 76%
-              <br />
-              Humidity: 55%
-              <br />
-              Wind: 7 m/s
+        <div class="city">
+          <div class="row">
+            <div class="col">
+              <div class="city-name">Gdynia</div>
+              <div class="weather-conditions">
+                Precipitation: 76%
+                <br />
+                Humidity: 55%
+                <br />
+                Wind: 7 m/s
+              </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="temperature-type">5°C|41°F</div>
-            <div class="weather-image">
-              <img
-                src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/230/white-sun-with-small-cloud_1f324.png"
-                width="70"
-              />
+            <div class="col">
+              <div class="temperature-type">5°C|41°F</div>
+              <div class="weather-image">
+                <img
+                  src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/230/white-sun-with-small-cloud_1f324.png"
+                  width="70"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </form>
       <div class="conditions-opinion">It's a sunny day!</div>
       <h4>Upcoming days:</h4>
       <div class="upcoming-days">
