@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather forecast</title>
     <script
       src="https://kit.fontawesome.com/e38bc5ffca.js"
@@ -42,13 +43,13 @@
       </div>
       <form class="search-engine" id="search-form">
         <div class="look-for-city">
-          <button type="button" class="btn btn-warning">
+          <button type="search" class="btn btn-warning">
             <img
               src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/230/left-pointing-magnifying-glass_1f50d.png"
               width="20"
             />
           </button>
-          <button type="button" class="btn btn-light">
+          <button type="search" class="btn btn-light" id="my-localization">
             <img
               src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/samsung/265/round-pushpin_1f4cd.png"
               width="20"
@@ -66,8 +67,8 @@
         <div class="city">
           <div class="row">
             <div class="col">
-              <div class="city-name">Gdynia</div>
-              <div class="weather-conditions">
+              <div class="city-name" id="city">Gdynia</div>
+              <div class="weather-conditions" id="#weather-description">
                 Precipitation: 76%
                 <br />
                 Humidity: 55%
@@ -76,7 +77,10 @@
               </div>
             </div>
             <div class="col">
-              <div class="temperature-type">5°C|41°F</div>
+              <div class="temperature-type" id="temperature-element">19</div>
+              <span class="units">
+                °C| <a href="#" id="fahrenheit-link"> °F</a>
+              </span>
               <div class="weather-image">
                 <img
                   src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/230/white-sun-with-small-cloud_1f324.png"
