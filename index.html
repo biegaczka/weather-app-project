@@ -68,19 +68,23 @@
           <div class="row">
             <div class="col">
               <div class="city-name" id="city">Gdynia</div>
-              <div class="weather-conditions" id="#weather-description">
-                Precipitation: 76%
+              <div class="weather-conditions">
+                <span id="description">Today you will see: </span>
                 <br />
-                Humidity: 55%
+                <span id="humidity"></span>
                 <br />
-                Wind: 7 m/s
+                <span id="wind"></span>
               </div>
             </div>
             <div class="col">
-              <div class="temperature-type" id="temperature-element">19</div>
-              <span class="units">
-                °C| <a href="#" id="fahrenheit-link"> °F</a>
-              </span>
+              <div class="temperature-type">
+                <div>
+                  <span id="temperature-element">
+                    <a href="#" id="celsius-link"> °C| </a>
+                  </span>
+                  <span><a href="#" id="fahrenheit-link">°F</a></span>
+                </div>
+              </div>
               <div class="weather-image">
                 <img
                   src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/facebook/230/white-sun-with-small-cloud_1f324.png"

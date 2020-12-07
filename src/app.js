@@ -32,15 +32,21 @@ function yearFollowUp(year) {
 }
 
 function showTemperature(response) {
- let cityElement= document.querySelector("#city");
- cityElement.innerHTML=response.data.name;
- console.log(cityElement);
- let temperature = Math.round(response.data.main.temp);
+  console.log(response);
  let temperatureElement = document.querySelector("#temperature-element");
+ let cityElement= document.querySelector("#city"); 
+ let descriptionElement = document.querySelector("#description");
+ let temperature = Math.round(response.data.main.temp);
+ let humidityELement = document.querySelector("#humidity");
+ let windElement = document.querySelector("#wind");
+ windElement.innerHTML=`Wind speed: ${Math.round(response.data.wind.speed)} m/s`;
+ console.log(windElement);
  let description = response.data.weather[0].description;
- let descriptionElement = document.querySelector("#weather-description");
+ console.log(description);
  temperatureElement.innerHTML = `${temperature}°C`;
- descriptionElement.innerHTML = `${description}`;
+ cityElement.innerHTML=response.data.name;
+ descriptionElement.innerHTML = `Today is: ${description}`;
+ humidityELement.innerHTML =`Humidity ${response.data.main.humidity} % `;
 }
 
 function searchCity(city){
@@ -67,6 +73,24 @@ event.preventDefault();
 navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function convertToFahrenheit(event){
+  event.preventDefault();
+  let temperatureElement=document.querySelector("#temperature-element");
+  let temperature = temperatureElement.innerHTML;
+  temperature=isNaN(temperature);
+  temperatureElement.innerHTML = Math.round((temperatureElement.innerHTML * 1.8) + 32);
+}
+
+function convertToCelsius(event){
+  event.preventDefault();
+  let temperatureElement=document.querySelector("#temperature-element");
+  let celsiusTemperature = temperatureElement.innerHTML;
+  temperature=isNaN(temperature);
+  temperatureElement.innerHTML = Math.round((temperature -32)*0.125);
+}
+
+
+
 let footer = document.querySelector("#date");
 let date = new Date();
 footer.innerHTML = formatedDate(date);
@@ -82,10 +106,11 @@ let currentLocalization=document.querySelector("#my-localization");
 currentLocalization.addEventListener("click", localWeather);
 searchCity("Gdynia");
 
-let temperatureElement=document.querySelector("#temperature-element");
-let temperature = temperatureElement.innerHTML;
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit)
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
 
+let celsiusTemperature= null;
 
