@@ -15,6 +15,12 @@ h4 {
   text-align: center;
 }
 
+h5 {
+  color: #ffd04d;
+  font-family: "Architects Daughter", cursive;
+  text-align: center;
+}
+
 .container {
   max-width: 30%;
   border: 1px solid #9d9a9b;
@@ -64,6 +70,7 @@ h4 {
 }
 
 .conditions-opinion {
+  color: #ffd04d;
   font-family: "Architects Daughter", cursive;
   display: block;
   position: relative;
@@ -71,11 +78,26 @@ h4 {
 }
 
 .upcoming-days {
-  font-family: "Architects Daughter", cursive;
+  font-family: "Ubuntu", sans-serif;
   display: block;
   position: relative;
-  left: 114px;
-  top: 0px;
+  left: 110px;
+  top: 5px;
+}
+
+.week-day {
+  color: #43537a;
+}
+
+.icon {
+  color: #43537a;
+}
+
+.temp {
+  color: #ffd04d;
+  font-weight: bold;
+  position: relative;
+  left: 15px;
 }
 
 p {
