@@ -32,21 +32,22 @@ function yearFollowUp(year) {
 }
 
 function showTemperature(response) {
-  console.log(response);
- let temperatureElement = document.querySelector("#temperature-element");
+  let temperatureElement = document.querySelector("#temperature-element");
  let cityElement= document.querySelector("#city"); 
  let descriptionElement = document.querySelector("#description");
- let temperature = Math.round(response.data.main.temp);
+ celsiusTemperature=response.data.main.temp;
+ let temperature = Math.round(celsiusTemperature);
  let humidityELement = document.querySelector("#humidity");
  let windElement = document.querySelector("#wind");
- windElement.innerHTML=`Wind speed: ${Math.round(response.data.wind.speed)} m/s`;
- console.log(windElement);
  let description = response.data.weather[0].description;
- console.log(description);
+
+ 
+
  temperatureElement.innerHTML = `${temperature}°C`;
  cityElement.innerHTML=response.data.name;
- descriptionElement.innerHTML = `Today is: ${description}`;
+ descriptionElement.innerHTML = `We have ${description}`;
  humidityELement.innerHTML =`Humidity ${response.data.main.humidity} % `;
+ windElement.innerHTML=`Wind speed: ${Math.round(response.data.wind.speed)} m/s`;
 }
 
 function searchCity(city){
@@ -75,21 +76,11 @@ navigator.geolocation.getCurrentPosition(searchLocation);
 
 function convertToFahrenheit(event){
   event.preventDefault();
-  let temperatureElement=document.querySelector("#temperature-element");
-  let temperature = temperatureElement.innerHTML;
-  temperature=isNaN(temperature);
-  temperatureElement.innerHTML = Math.round((temperatureElement.innerHTML * 1.8) + 32);
+  let temperatureElement = document.querySelector ("#temperature-element");
+  let fahrenheitTemperature=(celsiusTemperature*9)/5+32;
+  console.log(fahrenheitTemperature);
+  temperatureElement.innerHTML=Math.round(fahrenheitTemperature);
 }
-
-function convertToCelsius(event){
-  event.preventDefault();
-  let temperatureElement=document.querySelector("#temperature-element");
-  let celsiusTemperature = temperatureElement.innerHTML;
-  temperature=isNaN(temperature);
-  temperatureElement.innerHTML = Math.round((temperature -32)*0.125);
-}
-
-
 
 let footer = document.querySelector("#date");
 let date = new Date();
@@ -104,13 +95,11 @@ searchForm.addEventListener("submit",handleSubmit);
 
 let currentLocalization=document.querySelector("#my-localization");
 currentLocalization.addEventListener("click", localWeather);
-searchCity("Gdynia");
+
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
 let celsiusTemperature= null;
 
+searchCity("Bordeaux");
