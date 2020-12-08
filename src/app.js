@@ -32,7 +32,7 @@ function yearFollowUp(year) {
 }
 
 function showTemperature(response) {
-  let temperatureElement = document.querySelector("#temperature-element");
+ let temperatureElement = document.querySelector("#temperature-element");
  let cityElement= document.querySelector("#city"); 
  let descriptionElement = document.querySelector("#description");
  celsiusTemperature=response.data.main.temp;
@@ -43,7 +43,7 @@ function showTemperature(response) {
 
  
 
- temperatureElement.innerHTML = `${temperature}°C`;
+ temperatureElement.innerHTML = `${temperature}`;
  cityElement.innerHTML=response.data.name;
  descriptionElement.innerHTML = `We have ${description}`;
  humidityELement.innerHTML =`Humidity ${response.data.main.humidity} % `;
@@ -77,9 +77,18 @@ navigator.geolocation.getCurrentPosition(searchLocation);
 function convertToFahrenheit(event){
   event.preventDefault();
   let temperatureElement = document.querySelector ("#temperature-element");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemperature=(celsiusTemperature*9)/5+32;
-  console.log(fahrenheitTemperature);
   temperatureElement.innerHTML=Math.round(fahrenheitTemperature);
+}
+
+function convertToCelsius (event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector ("#temperature-element");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML=Math.round(celsiusTemperature);
 }
 
 let footer = document.querySelector("#date");
@@ -99,6 +108,9 @@ currentLocalization.addEventListener("click", localWeather);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
 
 let celsiusTemperature= null;
 

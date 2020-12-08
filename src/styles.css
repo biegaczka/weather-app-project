@@ -105,6 +105,15 @@ h5 {
   left: 15px;
 }
 
+.temperature-type .active {
+  color: rgb(234, 171, 25);
+  cursor: default;
+}
+
+.temperature-type .active:hover {
+  text-decoration: none;
+}
+
 p {
   font-family: "Ubuntu", sans-serif;
   font-size: small;
