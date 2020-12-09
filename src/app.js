@@ -50,8 +50,8 @@ function showTemperature(response) {
  let dateElement=document.querySelector("#date");
  dateElement.innerHTML=formatedDate(response.data.dt*1000);
  let iconElement=document.querySelector("#weather-icon");
- iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
- iconElement.setAttribute("alt",`http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png` )
+ iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+ iconElement.setAttribute("alt",`https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png` )
 
  
 
@@ -82,7 +82,7 @@ forecastElement.innerHTML=
     <div class="col-sm-2">
         <div class="icon">
           <img
-          src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" width=55
+          src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" width=55
           />
         </div>
       </div>
@@ -94,7 +94,7 @@ forecastElement.innerHTML=
     <div class="col-sm-2">
         <div class="icon">
           <img
-          src="http://openweathermap.org/img/wn/${forecastSix.weather[0].icon}@2x.png" width=55
+          src="https://openweathermap.org/img/wn/${forecastSix.weather[0].icon}@2x.png" width=55
           />
         </div>
       </div>
@@ -106,7 +106,7 @@ forecastNineElement.innerHTML=
     <div class="col-sm-2">
         <div class="icon">
           <img
-          src="http://openweathermap.org/img/wn/${forecastNine.weather[0].icon}@2x.png" width=55
+          src="https://openweathermap.org/img/wn/${forecastNine.weather[0].icon}@2x.png" width=55
           />
         </div>
       </div>
@@ -118,7 +118,7 @@ forecastNineElement.innerHTML=
     <div class="col-sm-2">
         <div class="icon">
           <img
-          src="http://openweathermap.org/img/wn/${forecastTwelve.weather[0].icon}@2x.png" width=55
+          src="https://openweathermap.org/img/wn/${forecastTwelve.weather[0].icon}@2x.png" width=55
           />
         </div>
       </div>
@@ -130,7 +130,7 @@ forecastNineElement.innerHTML=
     <div class="col-sm-2">
         <div class="icon">
           <img
-          src="http://openweathermap.org/img/wn/${forecastFifteen.weather[0].icon}@2x.png" width=55
+          src="https://openweathermap.org/img/wn/${forecastFifteen.weather[0].icon}@2x.png" width=55
           />
         </div>
       </div>
@@ -142,10 +142,10 @@ forecastNineElement.innerHTML=
 
 function searchCity(city){
 let apiKey = "06ca6b2e6fb5a01a965d59c5f70dc4cc";
-let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(showTemperature);
 
-apiUrl=`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+apiUrl=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayForecast)
 }
 
@@ -158,7 +158,7 @@ searchCity(city);
 function searchLocation (position) {
 let apiKey = "06ca6b2e6fb5a01a965d59c5f70dc4cc";
 let units="metric";
-let apiUrl =`http://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
+let apiUrl =`https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
 axios.get(apiUrl).then(showTemperature);
 }
 
