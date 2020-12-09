@@ -40,6 +40,9 @@ function showTemperature(response) {
  let humidityELement = document.querySelector("#humidity");
  let windElement = document.querySelector("#wind");
  let description = response.data.weather[0].description;
+ let iconElement=document.querySelector("#weather-icon");
+ iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+ iconElement.setAttribute("alt",`http://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png` )
 
  
 
