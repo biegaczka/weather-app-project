@@ -24,7 +24,17 @@ h4 {
 h5 {
   color: #ffd04d;
   font-family: "Architects Daughter", cursive;
+  font-weight: bold;
   text-align: center;
+  position: relative;
+  top: -10px;
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
+  font-size: small;
+  text-align: center;
+  opacity: 0.4;
 }
 
 .container {
@@ -35,6 +45,7 @@ h5 {
   background-image: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZXxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=500&q=60");
   margin-left: 450px;
   margin-top: 10px;
+  margin-bottom: 0px;
 }
 .todays-date {
   color: rgb(33, 45, 94, 0.8);
@@ -132,11 +143,4 @@ h5 {
 
 .temperature-type .active:hover {
   text-decoration: none;
-}
-
-p {
-  font-family: "Ubuntu", sans-serif;
-  font-size: small;
-  text-align: center;
-  opacity: 0.4;
 }
